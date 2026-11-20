@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Корзина — ShopProject</title>
+    <meta
+      name="description"
+      content="Современный интернет-магазин с каталогом товаров, преимуществами и формой оформления заявки."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/data.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/catalog.js" defer></script>
+<script src="js/validation.js" defer></script>
+<script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/interactive.css"></head>
+  <body><a class="skip-link" href="#top">Перейти к содержимому</a>
+    <header class="site-header-wrap">
+      <div class="container site-header">
+        <a class="site-logo" href="index.html" aria-label="Главная страница">
+          <span class="site-logo__mark">S</span>
+          <span>ShopProject</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Открыть меню</span>
+        </button>
+
+        <nav class="site-nav" id="site-menu" aria-label="Основная навигация">
+          <ul class="site-nav__list"><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="product.html">Товар</a></li><li><a href="order.html">Заявка</a></li><li><a href="contacts.html">Контакты</a></li><li><a href="cart.html">Корзина (<span data-cart-count>0</span>)</a></li></ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" tabindex="-1" class="container section"><h1>Корзина</h1><div id="cart-items"></div><p id="cart-total" role="status"></p><a class="button" href="order.html">Оформить заявку</a></main>
+
+    <footer class="site-footer" id="contacts">
+      <div class="container site-footer__inner">
+        <div>
+          <a class="site-logo site-logo--footer" href="#top">
+            <span class="site-logo__mark">S</span>
+            <span>ShopProject</span>
+          </a>
+          <p>Интернет-магазин полезных и стильных товаров для повседневной жизни.</p>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul class="contact-list">
+            <li>г. Москва, ул. Тихая, 12</li>
+            <li><a href="tel:+79001234567">+7 (900) 123-45-67</a></li>
+            <li><a href="mailto:shop@project.ru">shop@project.ru</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    
+  <p id="notice" role="status" class="container"></p></body>
+</html>

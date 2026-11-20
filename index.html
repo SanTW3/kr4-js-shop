@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopProject — каталог товаров</title>
+    <meta
+      name="description"
+      content="Современный интернет-магазин с каталогом товаров, преимуществами и формой оформления заявки."
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/data.js" defer></script>
+<script src="js/cart.js" defer></script>
+<script src="js/catalog.js" defer></script>
+<script src="js/validation.js" defer></script>
+<script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/interactive.css"></head>
+  <body><a class="skip-link" href="#top">Перейти к содержимому</a>
+    <header class="site-header-wrap">
+      <div class="container site-header">
+        <a class="site-logo" href="index.html" aria-label="Главная страница">
+          <span class="site-logo__mark">S</span>
+          <span>ShopProject</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Открыть меню</span>
+        </button>
+
+        <nav class="site-nav" id="site-menu" aria-label="Основная навигация">
+          <ul class="site-nav__list"><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="product.html">Товар</a></li><li><a href="order.html">Заявка</a></li><li><a href="contacts.html">Контакты</a></li><li><a href="cart.html">Корзина (<span data-cart-count>0</span>)</a></li></ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" tabindex="-1">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow">Новый сезон 2026</p>
+            <h1>Умный выбор для дома, работы и отдыха</h1>
+            <p class="hero__text">
+              Мы собрали практичные и стильные товары, которые помогут сделать пространство комфортнее,
+              а рабочие задачи — проще.
+            </p>
+            <div class="hero__actions">
+              <a class="button" href="catalog.html">Перейти к товарам</a>
+              <button class="button button--secondary open-order-dialog" type="button">Оформить заявку</button>
+            </div>
+            <ul class="hero__stats" aria-label="Показатели магазина">
+              <li><strong>1200+</strong><span>довольных клиентов</span></li>
+              <li><strong>4.9/5</strong><span>средний рейтинг</span></li>
+              <li><strong>48 ч</strong><span>доставка по городу</span></li>
+            </ul>
+          </div>
+
+          <div class="hero__visual" aria-label="Рекламная карточка товара">
+            <div class="product-highlight">
+              <picture><source media="(max-width: 600px)" srcset="images/goblin-400.jpg"><img src="images/goblin-800.jpg" srcset="images/goblin-400.jpg 400w, images/goblin-800.jpg 800w" sizes="(max-width: 600px) 100vw, 50vw" alt="GOBLIN Pro — изображение товара из проекта КР1" width="800" height="800"></picture>
+              <div class="product-highlight__content">
+                <span class="label">Лидеры продаж</span>
+                <h2>GOBLIN Pro</h2>
+                <p>Компактный девайс для рабочего стола и дома.</p>
+                <div class="product-highlight__meta">
+                  <span>от 3 990 ₽</span>
+                  <button class="button product-card__button" type="button" data-product="GOBLIN Pro">
+                    Заказать
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container" id="popular">
+        <div class="section-heading">
+          <p class="eyebrow">Каталог</p>
+          <h2>Популярные товары</h2>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-illustration" aria-label="Изображение товара отсутствует"><span>Smart Lamp</span></div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Новинка</span>
+              <h3>Smart Lamp</h3>
+              <p>Светильник с регулируемой температурой и таймером.</p>
+              <div class="product-card__meta">
+                <span class="product-card__price">2 490 ₽</span>
+                <button class="button product-card__button" type="button" data-product="Smart Lamp">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-illustration" aria-label="Изображение товара отсутствует"><span>Audio Mini</span></div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Хит</span>
+              <h3>Audio Mini</h3>
+              <p>Портативная колонка с глубоким чистым звучанием.</p>
+              <div class="product-card__meta">
+                <span class="product-card__price">4 390 ₽</span>
+                <button class="button product-card__button" type="button" data-product="Audio Mini">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-illustration" aria-label="Изображение товара отсутствует"><span>Desk Pro</span></div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Премиум</span>
+              <h3>Desk Pro</h3>
+              <p>Эргономичная подставка для ноутбука и монитора.</p>
+              <div class="product-card__meta">
+                <span class="product-card__price">3 190 ₽</span>
+                <button class="button product-card__button" type="button" data-product="Desk Pro">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-illustration" aria-label="Изображение товара отсутствует"><span>Clean Air</span></div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Для дома</span>
+              <h3>Clean Air</h3>
+              <p>Бесшумный очиститель воздуха для спальни и офиса.</p>
+              <div class="product-card__meta">
+                <span class="product-card__price">7 990 ₽</span>
+                <button class="button product-card__button" type="button" data-product="Clean Air">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-illustration" aria-label="Изображение товара отсутствует"><span>Travel Kit</span></div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Удобно</span>
+              <h3>Travel Kit</h3>
+              <p>Комплект аксессуаров для рабочих поездок и командировок.</p>
+              <div class="product-card__meta">
+                <span class="product-card__price">1 890 ₽</span>
+                <button class="button product-card__button" type="button" data-product="Travel Kit">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-illustration" aria-label="Изображение товара отсутствует"><span>Focus Hub</span></div>
+            <div class="product-card__body">
+              <span class="product-card__tag">Скидка</span>
+              <h3>Focus Hub</h3>
+              <p>Центр управления рабочим местом и техникой.</p>
+              <div class="product-card__meta">
+                <span class="product-card__price">5 690 ₽</span>
+                <button class="button product-card__button" type="button" data-product="Focus Hub">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container section--neutral" id="advantages">
+        <div class="section-heading">
+          <p class="eyebrow">Почему выбирают нас</p>
+          <h2>Преимущества проекта</h2>
+        </div>
+
+        <div class="advantages-list">
+          <article class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">01</div>
+            <h3>Качественный подбор</h3>
+            <p>Товары проверены по практичности, надежности и удобству эксплуатации.</p>
+          </article>
+          <article class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">02</div>
+            <h3>Простой заказ</h3>
+            <p>Оформление заявки занимает пару минут, а менеджер свяжется с вами быстро.</p>
+          </article>
+          <article class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">03</div>
+            <h3>Доставка по городу</h3>
+            <p>Оперативная доставка по Москве и другим регионам в удобное для вас время.</p>
+          </article>
+          <article class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">04</div>
+            <h3>Гарантия сервиса</h3>
+            <p>Помогаем подобрать товар, проверить совместимость и ответить на вопросы.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section container cta-section">
+        <div>
+          <p class="eyebrow">Нужна консультация?</p>
+          <h2>Подберём подходящий товар под ваш бюджет и задачи</h2>
+        </div>
+        <button class="button open-order-dialog" type="button">Связаться с менеджером</button>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacts">
+      <div class="container site-footer__inner">
+        <div>
+          <a class="site-logo site-logo--footer" href="#top">
+            <span class="site-logo__mark">S</span>
+            <span>ShopProject</span>
+          </a>
+          <p>Интернет-магазин полезных и стильных товаров для повседневной жизни.</p>
+        </div>
+        <div>
+          <h3>Контакты</h3>
+          <ul class="contact-list">
+            <li>г. Москва, ул. Тихая, 12</li>
+            <li><a href="tel:+79001234567">+7 (900) 123-45-67</a></li>
+            <li><a href="mailto:shop@project.ru">shop@project.ru</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    
+
+    
+  <p id="notice" role="status" class="container"></p></body>
+</html>
